@@ -596,30 +596,8 @@
 <li>调用这个函数，同时传入参数，</li>
 <li>调用方法，实现烹饪步骤</li>
 </ol>
-<h4 id="面向对象的代码如下："><a href="#面向对象的代码如下：" class="headerlink" title="面向对象的代码如下："></a>面向对象的代码如下：</h4><pre><code>var content = document.getElementById(&apos;content&apos;);
-function ChaoCai (g,d,m,s,f,p){
-    this.g = g;
-    this.d = d;
-    this.m = m;
-    this.s = s;
-    this.f = f;
-    this.p = p;
-}
-ChaoCai.prototype.fang = function(){
-    var div = document.createElement(&apos;div&apos;);
-    var br = document.createElement(&apos;br&apos;);
-    var html = this.g+&quot;中放入&quot;+this.s+&quot;，&quot;+this.s+&quot;热后放入&quot;+this.f+&quot;，放入&quot;
-    +this.d+&quot;，再放入&quot;+this.m+&quot;，从&quot;+this.g+&quot;盛入&quot;+this.p;
-    div.innerHTML = html;
-    content.appendChild(div);
-    content.appendChild(br);
-}
-var kaolengmian = new ChaoCai(&apos;铁板&apos;,&apos;鸡蛋&apos;,&apos;冷面&apos;,&apos;食用油&apos;,&apos;辅料&apos;,&apos;餐盒&apos;);
-kaolengmian.fang();
-
-var fan = new ChaoCai(&apos;锅&apos;,&apos;鸡蛋&apos;,&apos;米饭&apos;,&apos;食用油&apos;,&apos;辅料&apos;,&apos;盘子&apos;);
-fan.fang();
-</code></pre><p>综上所述，实现相同的业务逻辑，面向对象的实现方式明显比面向过程好很多，在需要多次使用相同代码的时候，不需要多次重复相同的事情，让编程工作变成了一项体力活，开发效率也不会太高，使用面向对象的方式编程开发，可以提升代码的复用性，使程序的性能有所提高。</p>
+<h4 id="面向对象的代码如下："><a href="#面向对象的代码如下：" class="headerlink" title="面向对象的代码如下："></a>面向对象的代码如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">var content = document.getElementById(&apos;content&apos;);</div><div class="line">function ChaoCai (g,d,m,s,f,p)&#123;</div><div class="line">	this.g = g;</div><div class="line">	this.d = d;</div><div class="line">	this.m = m;</div><div class="line">	this.s = s;</div><div class="line">	this.f = f;</div><div class="line">	this.p = p;</div><div class="line">&#125;</div><div class="line">ChaoCai.prototype.fang = function()&#123;</div><div class="line">	var div = document.createElement(&apos;div&apos;);</div><div class="line">	var br = document.createElement(&apos;br&apos;);</div><div class="line">	var html = this.g+&quot;中放入&quot;+this.s+&quot;，&quot;+this.s+&quot;热后放入&quot;+this.f+&quot;，放入&quot;</div><div class="line">	+this.d+&quot;，再放入&quot;+this.m+&quot;，从&quot;+this.g+&quot;盛入&quot;+this.p;</div><div class="line">	div.innerHTML = html;</div><div class="line">	content.appendChild(div);</div><div class="line">	content.appendChild(br);</div><div class="line">&#125;</div><div class="line">var kaolengmian = new ChaoCai(&apos;铁板&apos;,&apos;鸡蛋&apos;,&apos;冷面&apos;,&apos;食用油&apos;,&apos;辅料&apos;,&apos;餐盒&apos;);</div><div class="line">kaolengmian.fang();</div><div class="line"></div><div class="line">var fan = new ChaoCai(&apos;锅&apos;,&apos;鸡蛋&apos;,&apos;米饭&apos;,&apos;食用油&apos;,&apos;辅料&apos;,&apos;盘子&apos;);</div><div class="line">fan.fang();</div></pre></td></tr></table></figure>
+<p>综上所述，实现相同的业务逻辑，面向对象的实现方式明显比面向过程好很多，在需要多次使用相同代码的时候，不需要多次重复相同的事情，让编程工作变成了一项体力活，开发效率也不会太高，使用面向对象的方式编程开发，可以提升代码的复用性，使程序的性能有所提高。</p>
 
           
         
