@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>闭包的原理小结 | 张小程的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在理解闭包原理之前，首先要来回顾一下作用域的相关知识点。 作用域和闭包全局作用域和局部作用域的特点 全局作用域有命名冲突，声明多个同名变量，会互相覆盖。 函数内部的变量在函数被调用后，会被垃圾回收机制销毁，第二次调用函数变量值可能不同。 函数级别作用域（局部作用域）不存在命名冲突，即使多个函数内部声明同一个变量，也不会互相覆盖。   闭包的原理 使用局部作用域（函数内部声明变量），防止命名冲突（全">
+  <meta name="description" content="在理解闭包原理之前，首先要来回顾一下作用域的相关知识点。 作用域和闭包全局作用域和局部作用域的特点 全局作用域有命名冲突，声明多个同名变量，会互相覆盖。 函数内部的变量在函数被调用后，会被垃圾回收机制销毁，第二次调用函数变量值可能不同。 函数级别作用域（局部作用域）不存在命名冲突，即使多个函数内部声明同一个变量，也不会互相覆盖。">
 <meta name="keywords" content="闭包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="闭包的原理小结">
 <meta property="og:url" content="http://yoursite.com/2015/06/10/02-闭包的原理/index.html">
 <meta property="og:site_name" content="张小程的个人博客">
-<meta property="og:description" content="在理解闭包原理之前，首先要来回顾一下作用域的相关知识点。 作用域和闭包全局作用域和局部作用域的特点 全局作用域有命名冲突，声明多个同名变量，会互相覆盖。 函数内部的变量在函数被调用后，会被垃圾回收机制销毁，第二次调用函数变量值可能不同。 函数级别作用域（局部作用域）不存在命名冲突，即使多个函数内部声明同一个变量，也不会互相覆盖。   闭包的原理 使用局部作用域（函数内部声明变量），防止命名冲突（全">
+<meta property="og:description" content="在理解闭包原理之前，首先要来回顾一下作用域的相关知识点。 作用域和闭包全局作用域和局部作用域的特点 全局作用域有命名冲突，声明多个同名变量，会互相覆盖。 函数内部的变量在函数被调用后，会被垃圾回收机制销毁，第二次调用函数变量值可能不同。 函数级别作用域（局部作用域）不存在命名冲突，即使多个函数内部声明同一个变量，也不会互相覆盖。">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-10-17T08:08:40.464Z">
+<meta property="og:updated_time" content="2017-10-17T08:17:34.109Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="闭包的原理小结">
-<meta name="twitter:description" content="在理解闭包原理之前，首先要来回顾一下作用域的相关知识点。 作用域和闭包全局作用域和局部作用域的特点 全局作用域有命名冲突，声明多个同名变量，会互相覆盖。 函数内部的变量在函数被调用后，会被垃圾回收机制销毁，第二次调用函数变量值可能不同。 函数级别作用域（局部作用域）不存在命名冲突，即使多个函数内部声明同一个变量，也不会互相覆盖。   闭包的原理 使用局部作用域（函数内部声明变量），防止命名冲突（全">
+<meta name="twitter:description" content="在理解闭包原理之前，首先要来回顾一下作用域的相关知识点。 作用域和闭包全局作用域和局部作用域的特点 全局作用域有命名冲突，声明多个同名变量，会互相覆盖。 函数内部的变量在函数被调用后，会被垃圾回收机制销毁，第二次调用函数变量值可能不同。 函数级别作用域（局部作用域）不存在命名冲突，即使多个函数内部声明同一个变量，也不会互相覆盖。">
   
     <link rel="alternative" href="/atom.xml" title="张小程的个人博客" type="application/atom+xml">
   
@@ -181,7 +181,7 @@
 <li>函数内部的变量在函数被调用后，会被垃圾回收机制销毁，第二次调用函数变量值可能不同。</li>
 <li>函数级别作用域（局部作用域）不存在命名冲突，即使多个函数内部声明同一个变量，也不会互相覆盖。</li>
 </ul>
-<!--阅读全文-->
+<a id="more"></a>
 <h3 id="闭包的原理"><a href="#闭包的原理" class="headerlink" title="闭包的原理"></a>闭包的原理</h3><ul>
 <li>使用局部作用域（函数内部声明变量），防止命名冲突（全局变量污染）。</li>
 <li>父函数的内部声明一个子函数去使用父函数中的变量，防止变量被回收。</li>
@@ -443,6 +443,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">闭包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">面向对象</a>
               </li>
              
@@ -452,10 +456,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Webpack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">闭包</a>
               </li>
             
             <div class="clearfix"></div>
