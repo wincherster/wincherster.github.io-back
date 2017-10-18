@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>盒子模型和弹性布局实现自适应布局 | 张小程的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。 常见的实现方式有2种:- 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。 - 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:">
+  <meta name="description" content="在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。 常见的实现方式有2种: 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:数字;">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="盒子模型和弹性布局实现自适应布局">
 <meta property="og:url" content="http://yoursite.com/2015/07/12/05-盒子模型和弹性盒子实现相应式布局/index.html">
 <meta property="og:site_name" content="张小程的个人博客">
-<meta property="og:description" content="在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。 常见的实现方式有2种:- 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。 - 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:">
+<meta property="og:description" content="在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。 常见的实现方式有2种: 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:数字;">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/img/响应式布局.png">
-<meta property="og:updated_time" content="2017-10-18T05:18:56.193Z">
+<meta property="og:updated_time" content="2017-10-18T05:30:43.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="盒子模型和弹性布局实现自适应布局">
-<meta name="twitter:description" content="在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。 常见的实现方式有2种:- 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。 - 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:">
+<meta name="twitter:description" content="在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。 常见的实现方式有2种: 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:数字;">
 <meta name="twitter:image" content="http://yoursite.com/img/响应式布局.png">
   
     <link rel="alternative" href="/atom.xml" title="张小程的个人博客" type="application/atom+xml">
@@ -178,14 +178,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。</p>
-<h2 id="常见的实现方式有2种"><a href="#常见的实现方式有2种" class="headerlink" title="常见的实现方式有2种:"></a>常见的实现方式有2种:</h2><pre><code>- 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。
-- 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:数字; }实现比例。
-</code></pre><a id="more"></a>
+<h2 id="常见的实现方式有2种"><a href="#常见的实现方式有2种" class="headerlink" title="常见的实现方式有2种:"></a>常见的实现方式有2种:</h2><ul>
+<li>使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。</li>
+<li>使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:数字; }实现比例。</li>
+</ul>
+<a id="more"></a>
 <p>举个例子: 现在需要实现如图1-1所示的自适应布局</p>
-<pre><code>- 父盒子中有两个子盒子
-- 两个盒子的宽度比是2:1
-- 支持响应式缩放
-</code></pre><p><img src="/img/响应式布局.png" alt="“图1-1”"></p>
+<ul>
+<li>父盒子中有两个子盒子</li>
+<li>两个盒子的宽度比是2:1</li>
+<li>支持响应式缩放</li>
+</ul>
+<p><img src="/img/响应式布局.png" alt="“图1-1”"></p>
 <h2 id="1-使用盒子模型实现"><a href="#1-使用盒子模型实现" class="headerlink" title="1.使用盒子模型实现"></a>1.使用盒子模型实现</h2><p>首先实现页面的结构，父盒子中嵌套两个子盒子。然后所有div设置高度以便观察效果，根据要求的比例，计算两个盒子的百分比，子盒子设置不同的背景颜色。最后使用float属性，让两个子盒子处于一行。盒子模型的缺点是需要进行计算盒子的百分比，而且数值不会很精确（如果是大量的计算工作，开发效率会很低下）。</p>
 <h3 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"big"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"two"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="页面样式"><a href="#页面样式" class="headerlink" title="页面样式"></a>页面样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">	<span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.big</span>&#123;</div><div class="line">	<span class="attribute">border</span>:<span class="number">1px</span> solid yellow;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.one</span>&#123;</div><div class="line">	<span class="attribute">width</span>:<span class="number">66.666%</span>;</div><div class="line">	<span class="attribute">background-color</span>: red;</div><div class="line">	<span class="attribute">float</span>:left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.two</span>&#123;</div><div class="line">	<span class="attribute">width</span>:<span class="number">33.333%</span>;</div><div class="line">	<span class="attribute">background-color</span>: blue;</div><div class="line">	<span class="attribute">float</span>:left;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -463,11 +467,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+                <a href="javascript:void(0)" class="js-tag color3">Webpack</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Webpack</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
