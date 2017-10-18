@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2014 | 张小程的个人博客</title>
+  <title>盒子模型和弹性布局实现自适应布局 | 张小程的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="张小程的个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/2014/index.html">
+  <meta name="description" content="在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。 常见的实现方式有2种:- 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。 - 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="盒子模型和弹性布局实现自适应布局">
+<meta property="og:url" content="http://yoursite.com/2015/07/12/05-盒子模型和弹性盒子实现相应式布局/index.html">
 <meta property="og:site_name" content="张小程的个人博客">
+<meta property="og:description" content="在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。 常见的实现方式有2种:- 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。 - 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/img/响应式布局.png">
+<meta property="og:updated_time" content="2017-10-18T05:18:56.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="张小程的个人博客">
+<meta name="twitter:title" content="盒子模型和弹性布局实现自适应布局">
+<meta name="twitter:description" content="在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。 常见的实现方式有2种:- 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。 - 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:">
+<meta name="twitter:image" content="http://yoursite.com/img/响应式布局.png">
   
     <link rel="alternative" href="/atom.xml" title="张小程的个人博客" type="application/atom+xml">
   
@@ -150,48 +157,82 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-05-盒子模型和弹性盒子实现相应式布局" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/10/15/04-圣杯布局和双飞翼布局/" class="archive-article-date">
-  	<time datetime="2014-10-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-10-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/10/15/04-圣杯布局和双飞翼布局/">圣杯布局和双飞翼布局</a>
+    <h1 class="article-title" itemprop="name">
+      盒子模型和弹性布局实现自适应布局
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2015/07/12/05-盒子模型和弹性盒子实现相应式布局/" class="archive-article-date">
+  	<time datetime="2015-07-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。</p>
+<h2 id="常见的实现方式有2种"><a href="#常见的实现方式有2种" class="headerlink" title="常见的实现方式有2种:"></a>常见的实现方式有2种:</h2><pre><code>- 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。
+- 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:数字; }实现比例。
+</code></pre><a id="more"></a>
+<p>举个例子: 现在需要实现如图1-1所示的自适应布局</p>
+<pre><code>- 父盒子中有两个子盒子
+- 两个盒子的宽度比是2:1
+- 支持响应式缩放
+</code></pre><p><img src="/img/响应式布局.png" alt="“图1-1”"></p>
+<h2 id="1-使用盒子模型实现"><a href="#1-使用盒子模型实现" class="headerlink" title="1.使用盒子模型实现"></a>1.使用盒子模型实现</h2><p>首先实现页面的结构，父盒子中嵌套两个子盒子。然后所有div设置高度以便观察效果，根据要求的比例，计算两个盒子的百分比，子盒子设置不同的背景颜色。最后使用float属性，让两个子盒子处于一行。盒子模型的缺点是需要进行计算盒子的百分比，而且数值不会很精确（如果是大量的计算工作，开发效率会很低下）。</p>
+<h3 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"big"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"two"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="页面样式"><a href="#页面样式" class="headerlink" title="页面样式"></a>页面样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">	<span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.big</span>&#123;</div><div class="line">	<span class="attribute">border</span>:<span class="number">1px</span> solid yellow;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.one</span>&#123;</div><div class="line">	<span class="attribute">width</span>:<span class="number">66.666%</span>;</div><div class="line">	<span class="attribute">background-color</span>: red;</div><div class="line">	<span class="attribute">float</span>:left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.two</span>&#123;</div><div class="line">	<span class="attribute">width</span>:<span class="number">33.333%</span>;</div><div class="line">	<span class="attribute">background-color</span>: blue;</div><div class="line">	<span class="attribute">float</span>:left;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="2-使用弹性盒子实现"><a href="#2-使用弹性盒子实现" class="headerlink" title="2.使用弹性盒子实现"></a>2.使用弹性盒子实现</h2><p>不需要修改上面的页面结构，现在只需要将父盒子定义为{ display:flex; }弹性盒子，在子盒子中使用{ flex:数字; }定义各自的宽度比例即可，弹性盒子的优点是不需要进行计算盒子的百分比。</p>
+<h3 id="页面样式-1"><a href="#页面样式-1" class="headerlink" title="页面样式"></a>页面样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">	<span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.big</span>&#123;</div><div class="line">	<span class="attribute">display</span>:flex;</div><div class="line">	<span class="attribute">border</span>:<span class="number">1px</span> solid yellow;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.one</span>&#123;</div><div class="line">	<span class="attribute">flex</span>:<span class="number">2</span>;</div><div class="line">	<span class="attribute">background-color</span>: red;</div><div class="line">	<span class="attribute">float</span>:left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.two</span>&#123;</div><div class="line">	<span class="attribute">flex</span>:<span class="number">1</span>;</div><div class="line">	<span class="attribute">background-color</span>: blue;</div><div class="line">	<span class="attribute">float</span>:left;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>弹性盒子的实现方式明显优于盒子模型，不需要计算百分比，结果也更加精准。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -204,17 +245,124 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/07/12/05-盒子模型和弹性盒子实现相应式布局/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/07/28/03-webpack底层实现原理/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Webpack底层实现原理
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2015/06/10/02-闭包的原理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">闭包的原理小结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2015/07/12/05-盒子模型和弹性盒子实现相应式布局/", 
+    sourceId: "05-盒子模型和弹性盒子实现相应式布局",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -237,8 +385,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

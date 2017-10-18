@@ -239,6 +239,96 @@
 
 
   
+    <article id="post-05-盒子模型和弹性盒子实现相应式布局" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/12/05-盒子模型和弹性盒子实现相应式布局/">盒子模型和弹性布局实现自适应布局</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/12/05-盒子模型和弹性盒子实现相应式布局/" class="archive-article-date">
+  	<time datetime="2015-07-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在常规的项目开发中，很多时候不使用响应式框架的前提下，都需要开发人员手动实现自适应，这个时候盒子模型的优势就体现了出来。盒子结构的合理嵌套，以及CSS样式的使用，就能实现简单的自适应布局。</p>
+<h2 id="常见的实现方式有2种"><a href="#常见的实现方式有2种" class="headerlink" title="常见的实现方式有2种:"></a>常见的实现方式有2种:</h2><pre><code>- 使用简单的盒子模型的特性, 子盒子使用{ width:百分比; }实现比例缩放。
+- 使用CSS的属性{ display:flex; },注意要定义在父盒子上，子盒子使用{ flex:数字; }实现比例。
+</code></pre>
+        
+          <a class="article-more-a" href="/2015/07/12/05-盒子模型和弹性盒子实现相应式布局/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/页面布局//" class="article-tag-list-link color5">页面布局</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/12/05-盒子模型和弹性盒子实现相应式布局/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-02-闭包的原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -439,7 +529,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="两个布局的异同"><a href="#两个布局的异同" class="headerlink" title="两个布局的异同"></a>两个布局的异同</h2><p>首先我们先来看一下两个布局实现的页面效果<br><img src="/img/圣杯和双飞翼布局.png" alt="“圣杯和双飞翼布局”"></p>
+        <h2 id="两个布局的异同"><a href="#两个布局的异同" class="headerlink" title="两个布局的异同"></a>两个布局的异同</h2><p>首先我们先来看一下两个布局实现的页面效果<br><img src="/img/圣杯和双飞翼布局.jpg" alt="“圣杯和双飞翼布局”"></p>
 <h3 id="相同点"><a href="#相同点" class="headerlink" title="相同点"></a>相同点</h3><p>相同点是两者的表现形式（视觉效果）上都是三栏布局，左右两栏宽度固定，中间部分自适应，也就是常说的固比固布局，需要注意的点如下:</p>
 <ul>
 <li>中间的盒子优先渲染（要放在前面），宽度100%，两边的盒子宽度固定不变。</li>
@@ -609,7 +699,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Webpack</a>
+                <a href="javascript:void(0)" class="js-tag color3">闭包</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -617,7 +707,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">闭包</a>
+                <a href="javascript:void(0)" class="js-tag color3">Webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
             
             <div class="clearfix"></div>
