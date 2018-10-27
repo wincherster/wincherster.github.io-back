@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>闭包的原理小结 | 张小程的个人博客</title>
+  <title>基于Hexo和Github搭建个人博客 | 张小程的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在理解闭包原理之前，首先要来回顾一下作用域的相关知识点。 作用域和闭包全局作用域和局部作用域的特点 全局作用域有命名冲突，声明多个同名变量，会互相覆盖。 函数内部的变量在函数被调用后，会被垃圾回收机制销毁，第二次调用函数变量值可能不同。 函数级别作用域（局部作用域）不存在命名冲突，即使多个函数内部声明同一个变量，也不会互相覆盖。">
-<meta name="keywords" content="闭包">
+  <meta name="description" content="通常搭建个人博客需要相应的服务和技术支持，包括购买服务器空间，域名，挑选服务器部署工具等。这些对技术新人和小白专业性要求很高，而且很不友好。如何最快速最简便的搭建个人静态博客，其实很简单。可以基于Github的开源服务替代服务器空间，使用git工具进行部署，域名也可以省去。搭建博客的技术栈很多，我采用的Hexo，因为主题和样式丰富，具体的操作步骤如下：">
+<meta name="keywords" content="个人博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="闭包的原理小结">
-<meta property="og:url" content="http://yoursite.com/2015/06/10/02-闭包的原理/index.html">
+<meta property="og:title" content="基于Hexo和Github搭建个人博客">
+<meta property="og:url" content="http://yoursite.com/2014/10/10/00-使用Hexo搭建个人博客/index.html">
 <meta property="og:site_name" content="张小程的个人博客">
-<meta property="og:description" content="在理解闭包原理之前，首先要来回顾一下作用域的相关知识点。 作用域和闭包全局作用域和局部作用域的特点 全局作用域有命名冲突，声明多个同名变量，会互相覆盖。 函数内部的变量在函数被调用后，会被垃圾回收机制销毁，第二次调用函数变量值可能不同。 函数级别作用域（局部作用域）不存在命名冲突，即使多个函数内部声明同一个变量，也不会互相覆盖。">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-17T16:35:08.405Z">
+<meta property="og:description" content="通常搭建个人博客需要相应的服务和技术支持，包括购买服务器空间，域名，挑选服务器部署工具等。这些对技术新人和小白专业性要求很高，而且很不友好。如何最快速最简便的搭建个人静态博客，其实很简单。可以基于Github的开源服务替代服务器空间，使用git工具进行部署，域名也可以省去。搭建博客的技术栈很多，我采用的Hexo，因为主题和样式丰富，具体的操作步骤如下：">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-10-27T15:05:33.977Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="闭包的原理小结">
-<meta name="twitter:description" content="在理解闭包原理之前，首先要来回顾一下作用域的相关知识点。 作用域和闭包全局作用域和局部作用域的特点 全局作用域有命名冲突，声明多个同名变量，会互相覆盖。 函数内部的变量在函数被调用后，会被垃圾回收机制销毁，第二次调用函数变量值可能不同。 函数级别作用域（局部作用域）不存在命名冲突，即使多个函数内部声明同一个变量，也不会互相覆盖。">
+<meta name="twitter:title" content="基于Hexo和Github搭建个人博客">
+<meta name="twitter:description" content="通常搭建个人博客需要相应的服务和技术支持，包括购买服务器空间，域名，挑选服务器部署工具等。这些对技术新人和小白专业性要求很高，而且很不友好。如何最快速最简便的搭建个人静态博客，其实很简单。可以基于Github的开源服务替代服务器空间，使用git工具进行部署，域名也可以省去。搭建博客的技术栈很多，我采用的Hexo，因为主题和样式丰富，具体的操作步骤如下：">
   
     <link rel="alternative" href="/atom.xml" title="张小程的个人博客" type="application/atom+xml">
   
@@ -155,43 +155,61 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-02-闭包的原理" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-00-使用Hexo搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      闭包的原理小结
+      基于Hexo和Github搭建个人博客
     </h1>
   
 
         
-        <a href="/2015/06/10/02-闭包的原理/" class="archive-article-date">
-  	<time datetime="2015-06-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-10</time>
+        <a href="/2014/10/10/00-使用Hexo搭建个人博客/" class="archive-article-date">
+  	<time datetime="2014-10-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-10-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在理解闭包原理之前，首先要来回顾一下作用域的相关知识点。</p>
-<h2 id="作用域和闭包"><a href="#作用域和闭包" class="headerlink" title="作用域和闭包"></a>作用域和闭包</h2><h3 id="全局作用域和局部作用域的特点"><a href="#全局作用域和局部作用域的特点" class="headerlink" title="全局作用域和局部作用域的特点"></a>全局作用域和局部作用域的特点</h3><ul>
-<li>全局作用域有命名冲突，声明多个同名变量，会互相覆盖。</li>
-<li>函数内部的变量在函数被调用后，会被垃圾回收机制销毁，第二次调用函数变量值可能不同。</li>
-<li>函数级别作用域（局部作用域）不存在命名冲突，即使多个函数内部声明同一个变量，也不会互相覆盖。</li>
-</ul>
+        <p>通常搭建个人博客需要相应的服务和技术支持，包括购买服务器空间，域名，挑选服务器部署工具等。这些对技术新人和小白专业性要求很高，而且很不友好。<br>如何最快速最简便的搭建个人静态博客，其实很简单。可以基于Github的开源服务替代服务器空间，使用git工具进行部署，域名也可以省去。<br>搭建博客的技术栈很多，我采用的Hexo，因为主题和样式丰富，具体的操作步骤如下：</p>
 <a id="more"></a>
-<h3 id="闭包的原理"><a href="#闭包的原理" class="headerlink" title="闭包的原理"></a>闭包的原理</h3><ul>
-<li>使用局部作用域（函数内部声明变量），防止命名冲突（全局变量污染）。</li>
-<li>父函数的内部声明一个子函数去使用父函数中的变量，防止变量被回收。</li>
-<li>父函数return 这个子函数，然后使用变量去接收return的子函数，让其他函数可以读取其内部的变量，但是不能修改。</li>
-</ul>
-<h3 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h3><p>闭包的作用实际上就是保存自己私有的变量，通过提供的接口（方法）给外部使用，但外部不能直接访问该变量。</p>
-<h4 id="使用案例来详细说明"><a href="#使用案例来详细说明" class="headerlink" title="使用案例来详细说明:"></a>使用案例来详细说明:</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 声明一个全局作用域</span></div><div class="line"><span class="keyword">var</span> num1 = <span class="number">1</span>;  </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a1</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="comment">// 声明1个局部作用域</span></div><div class="line">	<span class="keyword">var</span> num2 = <span class="number">2</span>;  </div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">a2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="comment">// 声明1个局部作用域</span></div><div class="line">		<span class="keyword">var</span> num3 = <span class="number">3</span>; </div><div class="line">		<span class="comment">// 返回 num2 + num3 的和 </span></div><div class="line">		<span class="keyword">return</span> num2 + num3;  </div><div class="line">	&#125;</div><div class="line">	<span class="comment">// 返回 a2 这个函数，实际就是 num2 + num3 的和</span></div><div class="line">	<span class="keyword">return</span> a2;  </div><div class="line">&#125;</div><div class="line"><span class="comment">// 使用变量接收 a1的返回值 a2函数，实际num2 + num3 的和</span></div><div class="line"><span class="keyword">var</span> num4 = a1();  </div><div class="line"><span class="comment">// 控制台输出 num4的调用，实际是 num2 + num3 的和</span></div><div class="line"><span class="built_in">console</span>.log(num4());</div></pre></td></tr></table></figure>
-<p>上面的案例中，首先声明了一个全局变量 num1，紧接着声明函数a1，a1中声明局部变量 num2，然后又声明一个内部函数a2，同时a2中也声明了一个局部变量num3。<br>现在一共有3个作用域， 全局作用域，a1作用域，a2作用域。a2函数要使用num2首先在自己内部查找，如果没找到就去父函数a1的作用域中查找，假如父函数a1没有就到全局作用域中查找，直到找到为止，这样就形成了作用域链。</p>
-<p>注意：如果函数内部的变量在声明时没有使用 var ，这个变量就会提升为全局变量。</p>
-
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>注意，因为我使用的是MAC 命令前加了sudo来用管理权限，WIN电脑不用写sudo安装Hexo需要Node.js和git，有这两个之后直接用命令行安装Hexo<br>（PS：发现官网改命令了，回来更新下）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install hexo-cli -g</div></pre></td></tr></table></figure></p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p>创建一个文件夹 在命令行中将目录定位在该文件夹中，输入下面的命令（注意啊，目录一定搞清楚）：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo init //初始化</div><div class="line">npm install</div></pre></td></tr></table></figure></p>
+<h2 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h2><p>还是在该目录下执行命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo hexo generate // 可以简写为 hexo g</div></pre></td></tr></table></figure></p>
+<h2 id="安装hexo-server插件："><a href="#安装hexo-server插件：" class="headerlink" title="安装hexo-server插件："></a>安装hexo-server插件：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install hexo-server</div></pre></td></tr></table></figure>
+<h2 id="本地启动："><a href="#本地启动：" class="headerlink" title="本地启动："></a>本地启动：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server //可简写为 hexo s</div></pre></td></tr></table></figure>
+<p>如果执行上面出错4000端口被占用，我们可以修改默认的端口<br>在_config.yml文件最后添加下面这几段代码（几率很小）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">server:</div><div class="line">  port: 4000</div><div class="line">  compress: <span class="literal">true</span></div><div class="line">  header: <span class="literal">true</span></div></pre></td></tr></table></figure>
+<p>如果还是报错的话，那么请确定你是否是在你创建的文件夹下，也就是你安装的hexo文件夹下运行的命令（PS：很简单一点就是看看在你运行命令的地方能不能看到_config.yml文件）</p>
+<p>然后就是见证奇迹的时刻，在浏览器中输入 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 。就可以看到啦！激动…<br>但是…..到这里你的博客还只能自己看到。别人看不到啊，怎么办？？？ 接着往下看…</p>
+<h2 id="配置Github"><a href="#配置Github" class="headerlink" title="配置Github"></a>配置Github</h2><p>因为我是先研究的Github再研究的Hexo,所有Github早已经配置好啦，大概是这样的</p>
+<p>新建一个仓库 这里要注意的是 新建仓库的名字必须是 你的用户名.github.io<br>在刚才安装Hexo的文件夹下找到_config.yml文件，我们要对他进行修改了。（马上就可以让别人看到你的博客啦！）<br>用编辑器打开这个文件 拉到最下面进行修改(注意啊，每个冒号后面都有一个空格，别踩坑！)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: 这里填写你的Github仓库地址（去你Github那里直接复制过来）</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>（文件的其他参数，我后面有写，先不要急！）<br>安装用来部署到git上的插件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>执行部署（就跟项目上线差不多，执行了别人就能看到了，想好有没有BUG啊)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure></p>
+<h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><p>收到反馈，大部分人在部署这个地方出现了很多问题</p>
+<h3 id="问题1：报错出现"><a href="#问题1：报错出现" class="headerlink" title="问题1：报错出现"></a>问题1：报错出现</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">**place tell me who are you**</div></pre></td></tr></table></figure>
+<p>原因：<br>可能是你第一次使用GitHub上传东西，所有要告诉他，你是谁，好吧，那就告诉他吧。<br>（PS：运行下面命令，请注意，使用git bush运行。命令行可能会不识别）</p>
+<p>解决：<br>我是 git config –global user.name “yangyangyang”<br>我的邮箱 git config –global user.email “yyy@qq.com”<br>(PS: 你别真的把 我是。。。 我的邮箱。。打上去了)<br>然后可以查看配置是否成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --list</div></pre></td></tr></table></figure></p>
+<p>然后生成秘钥 ssh-keygen -t rsa -C “yyy@qq.com” 应该是连续按三四个回车就OK<br>如果中间弹出个（y/n）输入个 y 接着回车<br>然后注意反馈的命令里面的这一句<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/Administrator/.ssh/id_rsa)</div></pre></td></tr></table></figure></p>
+<p>括号后面的是路径，取那个路径取找 id_rsa.pub文件，记事本打开，复制里面的所有内容。<br>接着去github点你的头像，然后点下拉中的 Settings 然后看左边有个SSH and GPG keys 点进去<br>再点绿色的 New SSH key<br>然后 title 随便输入一个 key 中粘贴你刚才复制的东西<br>点击 下方绿色按钮 Add SSH key 好了 再回去执行 hexo deploy吧。</p>
+<h3 id="问题2：报错出现"><a href="#问题2：报错出现" class="headerlink" title="问题2：报错出现"></a>问题2：报错出现</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">error:failed to execute prompt script (<span class="built_in">exit</span> code 1)</div></pre></td></tr></table></figure>
+<p>那么恭喜你，麻烦了。<br>原因：我猜测是配置文件的问题，也就是上面我们配置_config.yml文件的时候，没有配置好。<br>解决：检查你的配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: 你仓库地址（HTTPS开头的）</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>看看格式是否正确 冒号后面必须跟空格，这几句的对齐方式也必须是这样的！！下面的缩进是两个空格，请不用使用 tab ！<br>检查完没问题，好的，再去执行一遍hexo deploy，还是报错，那么接着试</p>
+<p>把配置文件改成这样：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: 你仓库地址 （git开头的）</div><div class="line">  branch: master</div><div class="line">  name: 你github上的用户名</div><div class="line">  email: 你登陆github的邮箱</div></pre></td></tr></table></figure></p>
+<p>（PS：取仓库地址—-&gt; 登陆上去后，在右上角点你的github头像，下拉菜单中点your profile，<br>然后找你刚才建的以你应户名然后.github.io结尾的仓库，点进去，右边有个绿色按钮，<br>点击后，下拉的面板中左上角出现Clone with HTTPS,那下面的文本框中就是你以HTTPS开头的仓库地址，<br>要使用git开头的，请点下拉面板中的右上角 Use SSH 然后复制下面的地址）</p>
+<p>改完配置文件载执行 hexo deploy. 什么？还报错？ 那么我也没办法了！谷歌吧！</p>
+<p>大功告成！ 接下来就是见证奇迹时刻，在浏览器中输入 刚才你的仓库名 就是那个 你的用户名.github.io</p>
+<h2 id="总结一下："><a href="#总结一下：" class="headerlink" title="总结一下："></a>总结一下：</h2><p>每次对主题、文件等就行了修改，需要三步才能让你的博客让别人看到</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>要是感觉单词长 就这样写</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g -d</div></pre></td></tr></table></figure>
+<h2 id="一些常用的命令"><a href="#一些常用的命令" class="headerlink" title="一些常用的命令"></a>一些常用的命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hexo new “postName” <span class="comment">#新建文章</span></div><div class="line">hexo new page “pageName” <span class="comment">#新建页面</span></div><div class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></div><div class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</span></div><div class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></div><div class="line">hexo <span class="built_in">help</span> <span class="comment">#查看帮助</span></div><div class="line">hexo version <span class="comment">#查看Hexo的版本</span></div></pre></td></tr></table></figure>
+<p>创建的文章，在source/_posts下，后缀是md，哦对了！这里面那个Helloworld.md那个文件可以删了,<br>看到就想起来当初看java的时候，配置完环境，第一条输入的hello world！！</p>
+<h2 id="config-yml-文件的一些参数说明"><a href="#config-yml-文件的一些参数说明" class="headerlink" title="_config.yml 文件的一些参数说明"></a>_config.yml 文件的一些参数说明</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">title <span class="comment">#网站的标题</span></div><div class="line">subtitle <span class="comment">#网站的副标题</span></div><div class="line">description <span class="comment">#网站的描述</span></div><div class="line">author <span class="comment">#你的名字</span></div><div class="line">language <span class="comment">#网站的语言。使用2-lettter ISO-639-1代码。默认是en。（有填写规范的，别乱写）</span></div><div class="line">timezone <span class="comment">#网站的时区。Hexo默认使用计算机上的设置。你可以在这里找到可用的时区列表。一些例子是America/New_York，Japan和UTC。 （同上）</span></div></pre></td></tr></table></figure>
       
 
       
@@ -225,7 +243,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">闭包</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人博客</a>
         		</li>
       		
 		</ul>
@@ -237,7 +255,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/编程原理//" class="article-tag-list-link color5">编程原理</a>
+        			<a href="/categories/知识管理//" class="article-tag-list-link color5">知识管理</a>
         		</li>
       		
 		</ul>
@@ -292,7 +310,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/06/10/02-闭包的原理/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2014/10/10/00-使用Hexo搭建个人博客/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -306,20 +324,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2015/07/12/05-盒子模型和弹性盒子实现相应式布局/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2014/10/15/04-圣杯布局和双飞翼布局/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          盒子模型和弹性布局实现自适应布局
+          圣杯布局和双飞翼布局
         
       </div>
     </a>
   
-  
-    <a href="/2015/05/18/01-面向过程和面向对象思想/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">面向过程和面向对象思想小结</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -348,8 +361,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2015/06/10/02-闭包的原理/", 
-    sourceId: "02-闭包的原理",
+    url: "http://yoursite.com/2014/10/10/00-使用Hexo搭建个人博客/", 
+    sourceId: "00-使用Hexo搭建个人博客",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
